@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_NodejsPipe_1717102268776-push-trigger-input-set
+  identifier: Build_NodejsPipe_1717102268776pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: NodeJS_Pipeline
+  pipeline:
+    identifier: Build_NodejsPipe_1717102268776
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
