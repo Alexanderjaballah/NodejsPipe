@@ -39,3 +39,12 @@ pipeline:
                       mkdir $HOME/nodejs
                       curl -L https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.xz | tar xJ -C $HOME/nodejs
                       export PATH=$HOME/nodejs/node-v${NODE_VERSION}-linux-x64/bin:$PATH
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerRegistry_1
+                  identifier: BuildAndPushDockerRegistry_1
+                  spec:
+                    connectorRef: YOUR_DOCKER_CONNECTOR_ID
+                    repo: YOUR_DOCKER_HUB_USERNAME/DOCKER_REPO_NAME
+                    tags:
+                      - <+pipeline.sequenceId>
