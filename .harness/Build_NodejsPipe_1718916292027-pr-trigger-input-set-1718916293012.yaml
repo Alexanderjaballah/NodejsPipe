@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_NodejsPipe_1718916292027-pr-trigger-input-set
+  identifier: Build_NodejsPipe_1718916292027prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Nodejs_CICD
+  pipeline:
+    identifier: Build_NodejsPipe_1718916292027
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
